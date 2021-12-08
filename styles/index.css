@@ -1,0 +1,11 @@
+main {
+  margin: 70px 10%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main div {
+  width: 400px;
+  margin: 30px;
+}
