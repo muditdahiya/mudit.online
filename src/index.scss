@@ -1,0 +1,81 @@
+$phone: 320px;
+$tablet: 768px;
+$computer: 1440px;
+
+//GLOBAL
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  height: 8vh;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0 4vw;
+  z-index: 10;
+  p {
+    margin: 0 10px;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.Main {
+  padding: 2vh 8vw;
+  min-height: 84vh;
+}
+
+.Footer {
+  height: 4vh;
+  width: 100%;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9em;
+  p {
+    margin: 0;
+  }
+}
+
+//PHONE
+@media (min-width: $phone) {
+  body {
+    font-size: 1em;
+  }
+}
+
+//TABLET
+@media (min-width: $tablet) {
+  body {
+    font-size: 1.1em;
+  }
+}
+
+//COMPUTER
+@media (min-width: $computer) {
+  body {
+    font-size: 1.2em;
+  }
+}

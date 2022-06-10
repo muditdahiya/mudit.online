@@ -1,9 +1,14 @@
-import "./App.css";
+//components
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Main from "./containers/Main/Main";
 
 function App() {
   return (
     <div className="App">
-      <p>Hello, My name is Mudit</p>
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
