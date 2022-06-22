@@ -4,7 +4,6 @@ import guitar from "./guitar.jpg";
 import math from "./math.jpg";
 
 function Home() {
-  //left side
   useEffect(() => {
     const texts = [
       "I am a software developer ...",
@@ -57,7 +56,7 @@ function Home() {
         setTimeout(() => {
           let i = 1;
           const imageFadeOut = setInterval(() => {
-            if (i >= -1) {
+            if (i >= -0.05) {
               document.getElementById("animateImage").style.opacity = i;
               i -= 0.04;
             } else {

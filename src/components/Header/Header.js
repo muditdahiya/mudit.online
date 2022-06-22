@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
     <div className="Header">
       <div className="left">
-        <p>mudit.io</p>
+        <Link to={"/"}>mudit.io</Link>
       </div>
-      <div className="right">
-        <p>About</p>
-        <p>Projects</p>
-        <p>Hobbies</p>
-        <p>Contact</p>
-      </div>
+      <nav className="right">
+        <Link to={"/about"}>About</Link>
+        <Link to={"/projects"}>Projects</Link>
+        <Link to={"/hobbies"}>Hobbies</Link>
+        <Link to={"/contact"}>Contact</Link>
+      </nav>
     </div>
   );
 }
