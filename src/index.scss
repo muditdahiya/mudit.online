@@ -68,7 +68,6 @@ body {
     flex-direction: row;
     height: 55vh;
     .leftStage {
-      // background-color: red;
       width: 50%;
       display: flex;
       align-items: center;
@@ -76,18 +75,25 @@ body {
       border-right: 1px solid black;
       border-image: linear-gradient(
           to bottom,
-          rgba(0, 0, 0, 0) 15%,
+          rgba(0, 0, 0, 0) 0%,
           black 50%,
-          rgba(0, 0, 0, 0)
+          rgba(0, 0, 0, 0) 100%
         )
         1 100%;
     }
     .rightStage {
-      // background-color: yellow;
       width: 50%;
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
+      margin: 0 auto;
+    }
+
+    #animateImage {
+      max-width: 80%;
+      display: block;
+      margin: 0 auto;
     }
   }
 }
