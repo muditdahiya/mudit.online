@@ -13,18 +13,21 @@ function Home() {
 
     const images = [code, math, guitar];
 
+    const timeouts = [];
+
     const writeText = (text, image) => {
       return new Promise((resolve, reject) => {
         const time = 60;
         for (let i = 0; i < text.length; i++) {
-          setTimeout(() => {
+          const t1 = setTimeout(() => {
             document.getElementById("animateText").innerHTML += text[i];
           }, i * time);
+          timeouts.push(t1);
         }
 
         document.getElementById("animateImage").src = image;
 
-        setTimeout(() => {
+        const t2 = setTimeout(() => {
           let i = 0;
           const imageFadeIn = setInterval(() => {
             if (i <= 1) {
@@ -35,10 +38,12 @@ function Home() {
             }
           }, 10);
         }, time * 5);
+        timeouts.push(t2);
 
-        setTimeout(() => {
+        const t3 = setTimeout(() => {
           resolve();
         }, (text.length + 20) * time);
+        timeouts.push(t3);
       });
     };
 
@@ -46,14 +51,15 @@ function Home() {
       return new Promise((resolve, reject) => {
         const time = 60;
         for (let i = 0; i < text.length; i++) {
-          setTimeout(() => {
+          const t4 = setTimeout(() => {
             document.getElementById("animateText").innerHTML = document
               .getElementById("animateText")
               .innerHTML.slice(0, -1);
           }, i * time);
+          timeouts.push(t4);
         }
 
-        setTimeout(() => {
+        const t5 = setTimeout(() => {
           let i = 1;
           const imageFadeOut = setInterval(() => {
             if (i >= -0.05) {
@@ -64,10 +70,12 @@ function Home() {
             }
           }, 10);
         }, (text.length * time) / 2);
+        timeouts.push(t5);
 
-        setTimeout(() => {
+        const t6 = setTimeout(() => {
           resolve();
         }, (text.length + 5) * time);
+        timeouts.push(t6);
       });
     };
 
@@ -84,6 +92,12 @@ function Home() {
     }
 
     animate();
+
+    return () => {
+      timeouts.forEach((timeout) => {
+        clearTimeout(timeout);
+      });
+    };
   });
 
   return (
