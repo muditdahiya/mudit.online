@@ -91,7 +91,10 @@ function Home() {
       }
     }
 
-    animate();
+    const t7 = setTimeout(() => {
+      animate();
+    }, 500);
+    timeouts.push(t7);
 
     return () => {
       timeouts.forEach((timeout) => {
