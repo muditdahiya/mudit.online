@@ -4,13 +4,23 @@ function Header() {
   return (
     <div className="Header">
       <div className="left">
-        <Link to={"/"}>mudit.io</Link>
+        <Link className="Link" to={"/"}>
+          mudit.io
+        </Link>
       </div>
       <nav className="right">
-        <Link to={"/about"}>About</Link>
-        <Link to={"/projects"}>Projects</Link>
-        <Link to={"/hobbies"}>Hobbies</Link>
-        <Link to={"/contact"}>Contact</Link>
+        <Link className="Link" to={"/about"}>
+          About
+        </Link>
+        <Link className="Link" to={"/projects"}>
+          Projects
+        </Link>
+        <Link className="Link" to={"/hobbies"}>
+          Hobbies
+        </Link>
+        <Link className="Link" to={"/contact"}>
+          Contact
+        </Link>
       </nav>
     </div>
   );
