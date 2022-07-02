@@ -1,5 +1,4 @@
 // left right padding steps 4vw
-
 $phone: 320px;
 $tablet: 768px;
 $computer: 1440px;
@@ -43,7 +42,11 @@ body {
   .Link {
     text-decoration: none;
     color: white;
-    margin-left: 1vw;
+    margin-left: 1.5vw;
+  }
+  .Link:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
   }
 }
 
