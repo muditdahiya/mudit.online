@@ -1,7 +1,7 @@
 function Hobbies() {
   return (
     <div className="Hobbies">
-      <p>This is Hobbies</p>
+      <h2>Hobbies</h2>
     </div>
   );
 }
