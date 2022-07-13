@@ -71,8 +71,8 @@ function Home() {
   });
 
   return (
-    <div className="Home">
-      <h1>Hi, this is Mudit</h1>
+    <div className="Home page">
+      <h1 className="pageHeading">Hi, this is Mudit</h1>
       <div id="stage">
         <h2>
           <span id="animateText"></span>

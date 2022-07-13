@@ -1,7 +1,7 @@
 function Hobbies() {
   return (
-    <div className="Hobbies">
-      <h2>Hobbies</h2>
+    <div className="Hobbies page">
+      <h2 className="pageHeading">Hobbies</h2>
     </div>
   );
 }

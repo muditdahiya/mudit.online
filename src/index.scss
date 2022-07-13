@@ -5,6 +5,19 @@ $phone: 320px;
 $tablet: 768px;
 $computer: 1440px;
 
+//ANIMATIONS
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.page {
+  animation: ease-out fadein 0.5s;
+}
+
 //GLOBAL
 body {
   margin: 0;
@@ -27,9 +40,6 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 0 4vw;
   z-index: 10;
-  p {
-    margin: 0 10px;
-  }
 
   .right {
     display: flex;
@@ -49,6 +59,13 @@ body {
   .Link:hover {
     text-decoration: underline;
     transform: scale(1.05);
+  }
+  .logo {
+    height: 7vh;
+  }
+  .menu,
+  .cross {
+    height: 4vh;
   }
 }
 
@@ -73,26 +90,44 @@ body {
 
 .Home {
   #stage {
-    // background-color: blue;
-    // display: flex;
-    // flex-direction: row;
-    margin-left: 4vw;
+    // margin-left: 4vw;
     height: 55vh;
   }
 }
 
 .About {
+  .PDF {
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+//LESS THAN PHONE
+@media (max-width: $phone) {
+  body {
+    font-size: 0.8em;
+  }
 }
 
 //PHONE
-@media (min-width: $phone) {
+@media (max-width: $tablet) {
   body {
     font-size: 1em;
+  }
+  .About {
+    .PDF {
+      height: 60vh;
+    }
+  }
+  .menu,
+  .cross {
+    display: block;
   }
 }
 
 //TABLET
-@media (min-width: $tablet) {
+@media (max-width: $computer) {
   body {
     font-size: 1.1em;
   }
