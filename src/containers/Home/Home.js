@@ -83,8 +83,8 @@ function Home() {
           </p>
         </h3>
       </div>
-      <h2>Welcome to my portfolio :)</h2>
-      <h3>You are the x visitor here!</h3>
+      <h2>Welcome to my portfolio!</h2>
+      <h3>You are the x visitor here! 📈</h3>
     </div>
   );
 }
