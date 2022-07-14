@@ -13,18 +13,20 @@ function Header() {
         </Link>
       </div>
       <nav className="right">
-        {/* <Link className="Link" to={"/about"}>
-          About
-        </Link>
-        <Link className="Link" to={"/projects"}>
-          Projects
-        </Link>
-        <Link className="Link" to={"/hobbies"}>
-          Hobbies
-        </Link>
-        <Link className="Link" to={"/contact"}>
-          Contact
-        </Link> */}
+        <div className="Links">
+          <Link className="Link" to={"/about"}>
+            About
+          </Link>
+          <Link className="Link" to={"/projects"}>
+            Projects
+          </Link>
+          <Link className="Link" to={"/hobbies"}>
+            Hobbies
+          </Link>
+          <Link className="Link" to={"/contact"}>
+            Contact
+          </Link>
+        </div>
         <img className="menu" src={menu} alt="menu"></img>
         <img className="cross" src={cross} alt="cross"></img>
       </nav>

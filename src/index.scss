@@ -40,7 +40,6 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 0 4vw;
   z-index: 10;
-
   .right {
     display: flex;
     flex-direction: row;
@@ -66,6 +65,7 @@ body {
   .menu,
   .cross {
     height: 4vh;
+    display: none;
   }
 }
 
@@ -89,12 +89,12 @@ body {
 }
 
 .Home {
-  #stage {
-    // margin-left: 4vw;
-    height: 55vh;
+  #fixedSpace {
+    //fixing a space for the text animation
+    line-height: 1.5em;
+    height: 4.5em;
   }
 }
-
 .About {
   .PDF {
     height: 80vh;
@@ -115,14 +115,24 @@ body {
   body {
     font-size: 1em;
   }
+  .Header {
+    .menu {
+      display: block;
+    }
+    .cross,
+    .Links {
+      display: none;
+    }
+  }
+  .Home {
+    #animateText {
+      font-size: 0.95em;
+    }
+  }
   .About {
     .PDF {
       height: 60vh;
     }
-  }
-  .menu,
-  .cross {
-    display: block;
   }
 }
 
