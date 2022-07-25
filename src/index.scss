@@ -16,9 +16,19 @@ $computer: 1440px;
 }
 .page {
   animation: ease-out fadein 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
 }
 
 //GLOBAL
+.Main {
+  //Centers all the pages
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -33,13 +43,15 @@ body {
 
 .Header {
   height: 8vh;
+  z-index: 10;
   color: white;
   background-color: black;
-  display: flex;
-  justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 0 4vw;
-  z-index: 10;
+  .stage {
+    display: flex;
+    justify-content: space-between;
+  }
   .right {
     display: flex;
     flex-direction: row;
@@ -49,11 +61,13 @@ body {
   .left {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   .Link {
     text-decoration: none;
     color: white;
     margin-left: 1.5vw;
+    padding: 0%;
   }
   .Link:hover {
     text-decoration: underline;
@@ -61,6 +75,8 @@ body {
   }
   .logo {
     height: 7vh;
+    position: relative;
+    top: 100%;
   }
   .menu,
   .cross {
@@ -89,17 +105,81 @@ body {
 }
 
 .Home {
+  .stage {
+    display: flex;
+    flex-direction: row;
+    margin: 5vh;
+    width: 100%;
+  }
+  .leftStage {
+    width: 50%;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .rightStage {
+    width: 50%;
+    // background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .gif {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      mask-image: radial-gradient(rgba(0, 0, 0, 1) 64%, rgba(0, 0, 0, 0) 100%);
+    }
+  }
   #fixedSpace {
     //fixing a space for the text animation
     line-height: 1.5em;
-    height: 4.5em;
+    min-height: 4.5em;
   }
 }
 .About {
   .PDF {
     height: 80vh;
-    width: 100%;
+    width: 80vw;
+    max-width: inherit;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .card {
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: rgba(235, 235, 235, 0.386);
+
+    //make versions for tab and phone
+    width: 250px;
+
+    padding: 0 10px;
+    margin: 20px;
+
+    h3 {
+      margin: 10px 0 0 0;
+    }
+    .arrange {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    img {
+      margin: 10px 0 0 0;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
   }
 }
 
@@ -127,6 +207,12 @@ body {
   .Home {
     #animateText {
       font-size: 0.95em;
+    }
+    .rightStage {
+      display: none;
+    }
+    .leftStage {
+      width: 100%;
     }
   }
   .About {

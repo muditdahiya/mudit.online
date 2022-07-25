@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import faceAnimation from "./faceAnimation.gif";
 
 function Home() {
   useEffect(() => {
@@ -73,18 +74,29 @@ function Home() {
 
   return (
     <div className="Home page">
-      <h1 className="pageHeading">Hi, this is Mudit &#128075;</h1>
-      <div id="fixedSpace">
-        <h3>
-          <p id="animateText">
-            <br />
-            <br />
-            <br />
-          </p>
-        </h3>
+      <div className="stage">
+        <div className="leftStage">
+          <div className="leftContent">
+            <h1 className="pageHeading">Hi, this is Mudit &#128075;</h1>
+            <div id="fixedSpace">
+              <h3>
+                <p id="animateText">
+                  <br />
+                  <br />
+                  <br />
+                </p>
+              </h3>
+            </div>
+            <h2>Welcome to my portfolio!</h2>
+            <h3>
+              You are the <span id="visitorNumber">x</span> visitor here! 📈
+            </h3>
+          </div>
+        </div>
+        <div className="rightStage">
+          <img className="gif" src={faceAnimation} alt="Animated gif"></img>
+        </div>
       </div>
-      <h2>Welcome to my portfolio!</h2>
-      <h3>You are the x visitor here! 📈</h3>
     </div>
   );
 }
