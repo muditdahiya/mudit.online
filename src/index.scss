@@ -14,12 +14,24 @@ $computer: 1440px;
     opacity: 1;
   }
 }
+@keyframes zoomin {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .page {
   animation: ease-out fadein 0.5s;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 1440px;
+}
+.pageHeading {
+  animation: ease-out zoomin 0.3s;
+  font-size: 1.8em;
 }
 
 //GLOBAL
@@ -40,7 +52,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .Header {
   height: 8vh;
   z-index: 10;
@@ -84,12 +95,10 @@ body {
     display: none;
   }
 }
-
 .Main {
   padding: 2vh 8vw;
   min-height: 84vh;
 }
-
 .Footer {
   height: 4vh;
   width: 100%;
@@ -103,7 +112,6 @@ body {
     margin: 0;
   }
 }
-
 .Home {
   .stage {
     display: flex;
@@ -128,16 +136,17 @@ body {
     align-items: center;
 
     .gif {
+      animation: ease-out zoomin 0.3s;
       width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
+      max-width: 400px;
+      border-radius: 35%;
       mask-image: radial-gradient(rgba(0, 0, 0, 1) 64%, rgba(0, 0, 0, 0) 100%);
     }
   }
   #fixedSpace {
     //fixing a space for the text animation
     line-height: 1.5em;
-    min-height: 4.5em;
+    min-height: 7.5em;
   }
 }
 .About {
@@ -150,35 +159,39 @@ body {
     justify-content: center;
   }
 }
-
 .Cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  .card {
-    border: 2px solid black;
-    border-radius: 3px;
-    background-color: rgba(235, 235, 235, 0.386);
-
-    //make versions for tab and phone
-    width: 250px;
-
-    padding: 0 10px;
+  width: 80vw;
+  max-width: inherit;
+  hr {
+    width: 100%;
+  }
+  a {
+    color: inherit;
+  }
+  .cardWrap {
     margin: 20px;
+  }
+  .card {
+    // background-color: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-    h3 {
-      margin: 10px 0 0 0;
+    .cardLeft {
+      // background-color: green;
+      width: 80%;
     }
-    .arrange {
+    .cardRight {
+      width: 20%;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    img {
-      margin: 10px 0 0 0;
-      height: 80px;
-      border-radius: 50%;
-      border: 1px solid black;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // background-color: blue;
+      img {
+        max-height: 200px;
+        height: 4.5em;
+      }
     }
   }
 }
