@@ -162,6 +162,9 @@ body {
 .Cards {
   width: 80vw;
   max-width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   hr {
     width: 100%;
   }
@@ -170,6 +173,8 @@ body {
   }
   .cardWrap {
     margin: 20px;
+    width: 100%;
+    max-width: 900px;
   }
   .card {
     // background-color: red;
