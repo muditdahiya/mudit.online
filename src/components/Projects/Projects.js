@@ -26,16 +26,17 @@ function Projects() {
             </div>
           </div>
           <p>
-            This is a blog site made with React and Express. It uses PostgreSQL
-            as the database. This is a blog site made with React and Express. It
-            uses PostgreSQL as the database.This is a blog site made with React
-            and Express. It uses PostgreSQL as the database.This is a blog site
-            made with React and Express. It uses PostgreSQL as the database.This
-            is a blog site made with React and Express. It uses PostgreSQL as
-            the database.This is a blog site made with React and Express. It
-            uses PostgreSQL as the database.This is a blog site made with React
-            and Express. It uses PostgreSQL as the database.
+            This is a blogging app made with React on the front end and Express
+            on the back end. It uses PostgreSQL as the database, making it an
+            app made with the PERN stack.
           </p>
+          <ul>
+            <li>Some information</li>
+            <li>Some information</li>
+            <li>Some information</li>
+            <li>Some information</li>
+            <li>Some information</li>
+          </ul>
         </div>
         <hr />
         <div className="cardWrap">
@@ -59,17 +60,14 @@ function Projects() {
               ></img>
             </div>
           </div>
-          <p>
-            This is a blog site made with React and Express. It uses PostgreSQL
-            as the database. This is a blog site made with React and Express. It
-            uses PostgreSQL as the database.This is a blog site made with React
-            and Express. It uses PostgreSQL as the database.This is a blog site
-            made with React and Express. It uses PostgreSQL as the database.This
-            is a blog site made with React and Express. It uses PostgreSQL as
-            the database.This is a blog site made with React and Express. It
-            uses PostgreSQL as the database.This is a blog site made with React
-            and Express. It uses PostgreSQL as the database.
-          </p>
+          <p>This is a React web app that uses the sound API.</p>
+          <ul>
+            <li>Some information</li>
+            <li>Some information</li>
+            <li>Some information</li>
+            <li>Some information</li>
+            <li>Some information</li>
+          </ul>
         </div>
       </div>
     </div>
