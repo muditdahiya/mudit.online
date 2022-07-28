@@ -22,6 +22,14 @@ $computer: 1440px;
     transform: scale(1);
   }
 }
+@keyframes dropmenu {
+  from {
+    top: 6vh;
+  }
+  to {
+    top: 8vh;
+  }
+}
 .page {
   animation: ease-out fadein 0.5s;
   display: flex;
@@ -32,6 +40,9 @@ $computer: 1440px;
 .pageHeading {
   animation: ease-out zoomin 0.3s;
   font-size: 1.8em;
+}
+.dropdown {
+  animation: ease-out fadein 0.2s, ease-out dropmenu 0.2s;
 }
 
 //GLOBAL
@@ -93,6 +104,23 @@ body {
   .cross {
     height: 4vh;
     display: none;
+  }
+  .dropdown {
+    display: none;
+    z-index: 4;
+    width: 30vw;
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .Link {
+      margin: 12px 0;
+    }
   }
 }
 .Main {
