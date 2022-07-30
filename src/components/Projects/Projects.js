@@ -3,6 +3,10 @@ function Projects() {
     <div className="Projects page">
       <h2 className="pageHeading">Projects</h2>
       <div className="Cards">
+        <h3>
+          I have many projects under my belt. Here are a few that I have hosted
+          online:
+        </h3>
         <hr />
         <div className="cardWrap">
           <div className="card">
@@ -69,6 +73,7 @@ function Projects() {
             <li>Some information</li>
           </ul>
         </div>
+        <hr />
       </div>
     </div>
   );
