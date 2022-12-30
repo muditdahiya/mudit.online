@@ -254,8 +254,14 @@ body {
     #animateText {
       font-size: 0.95em;
     }
+    .stage {
+      display: flex;
+      flex-direction: column;
+      margin: 5vh;
+      width: 100%;
+    }
     .rightStage {
-      display: none;
+      width: 100%;
     }
     .leftStage {
       width: 100%;

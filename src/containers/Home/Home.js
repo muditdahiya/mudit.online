@@ -78,6 +78,7 @@ function Home() {
         <div className="leftStage">
           <div className="leftContent">
             <h1 className="pageHeading">Hi, this is Mudit &#128075;</h1>
+            <h2>Welcome to my portfolio!</h2>
             <div id="fixedSpace">
               <h3>
                 <p id="animateText">
@@ -87,10 +88,6 @@ function Home() {
                 </p>
               </h3>
             </div>
-            <h2>Welcome to my portfolio!</h2>
-            <h3>
-              You are the <span id="visitorNumber">x</span> visitor here! 📈
-            </h3>
           </div>
         </div>
         <div className="rightStage">
