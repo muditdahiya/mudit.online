@@ -13,7 +13,7 @@ function About() {
             No online PDF viewer installed.{" "}
             <a href="https://drive.google.com/file/d/1hkVs2cTJnawdDW5WOMfUrBwsMMAAUqK2/preview">
               Click here
-            </a>{" "}
+            </a>
             to view PDF.
           </div>
         </object>

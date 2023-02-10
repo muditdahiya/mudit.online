@@ -14,7 +14,7 @@ function Projects() {
               <h3>ThoughtServe</h3>
               <p>
                 <a
-                  href="https://thought-serve.herokuapp.com/"
+                  href="https://muditdahiya.com/thought-serve/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -24,7 +24,7 @@ function Projects() {
             </div>
             <div className="cardRight">
               <img
-                src="https://thought-serve.herokuapp.com/favicon.ico"
+                src="https://muditdahiya.com/thought-serve/favicon.ico"
                 alt="logo"
               ></img>
             </div>
