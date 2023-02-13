@@ -3,18 +3,18 @@ function Projects() {
     <div className="Projects page">
       <h2 className="pageHeading">Projects</h2>
       <div className="Cards">
-        <h3>
+        <p>
           I have many projects under my belt. Here are a few that I have hosted
           online:
-        </h3>
+        </p>
         <hr />
         <div className="cardWrap">
           <div className="card">
             <div className="cardLeft">
-              <h3>ThoughtServe</h3>
+              <h2>ThoughtServe</h2>
               <p>
                 <a
-                  href="https://muditdahiya.com/thought-serve/"
+                  href="http://muditdahiya.com/thought-serve/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -24,7 +24,7 @@ function Projects() {
             </div>
             <div className="cardRight">
               <img
-                src="https://muditdahiya.com/thought-serve/favicon.ico"
+                src="http://muditdahiya.com/thought-serve/favicon.ico"
                 alt="logo"
               ></img>
             </div>
@@ -46,10 +46,10 @@ function Projects() {
         <div className="cardWrap">
           <div className="card">
             <div className="cardLeft">
-              <h3>Beat Maker</h3>
+              <h2>Beat Maker</h2>
               <p>
                 <a
-                  href="https://beat-maker-md.herokuapp.com/"
+                  href="http://muditdahiya.com/beat-maker"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -59,7 +59,7 @@ function Projects() {
             </div>
             <div className="cardRight">
               <img
-                src="https://beat-maker-md.herokuapp.com/favicon.ico"
+                src="http://muditdahiya.com/beat-maker/favicon.ico"
                 alt="logo"
               ></img>
             </div>

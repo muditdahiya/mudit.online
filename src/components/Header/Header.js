@@ -51,6 +51,9 @@ function Header() {
             <Link className="Link" to={"/hobbies"}>
               Hobbies
             </Link>
+            <Link className="Link" to={"/resume"}>
+              Resume
+            </Link>
             <Link className="Link" to={"/contact"}>
               Contact
             </Link>
