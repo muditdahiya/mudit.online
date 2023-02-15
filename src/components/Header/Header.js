@@ -42,15 +42,18 @@ function Header() {
         </div>
         <nav className="right">
           <div className="Links">
+            <Link className="Link" to={"/"}>
+              Home
+            </Link>
             <Link className="Link" to={"/about"}>
               About
             </Link>
             <Link className="Link" to={"/projects"}>
               Projects
             </Link>
-            <Link className="Link" to={"/hobbies"}>
+            {/* <Link className="Link" to={"/hobbies"}>
               Hobbies
-            </Link>
+            </Link> */}
             <Link className="Link" to={"/resume"}>
               Resume
             </Link>
@@ -61,14 +64,20 @@ function Header() {
           <img className="menu" src={menu} alt="menu"></img>
           <img className="cross" src={cross} alt="cross"></img>
           <div className="dropdown">
+            <Link className="Link" to={"/"}>
+              Home
+            </Link>
             <Link className="Link" to={"/about"}>
               About
             </Link>
             <Link className="Link" to={"/projects"}>
               Projects
             </Link>
-            <Link className="Link" to={"/hobbies"}>
+            {/* <Link className="Link" to={"/hobbies"}>
               Hobbies
+            </Link> */}
+            <Link className="Link" to={"/resume"}>
+              Resume
             </Link>
             <Link className="Link" to={"/contact"}>
               Contact
