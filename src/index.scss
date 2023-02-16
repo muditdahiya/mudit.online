@@ -259,6 +259,9 @@ body {
   h3 {
     text-align: center;
   }
+  strong {
+    margin-bottom: 30px;
+  }
   .socialMedia {
     width: 80%;
     margin-bottom: 30px;
@@ -303,7 +306,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 0 0 30px 0;
+    margin: 0 0 20px 0;
   }
   .cardLeft,
   .cardRight {
@@ -315,9 +318,8 @@ body {
     min-height: 100px;
     resize: vertical;
     font-family: inherit;
-    padding: 0;
+    padding: 0.5em;
     margin: 0;
-    padding: 0.2em;
     box-sizing: border-box;
     margin: 10px 0;
   }
@@ -327,6 +329,15 @@ body {
     box-sizing: border-box;
     margin: 10px 0;
     padding: 0.5em;
+  }
+
+  .submitWrap {
+    display: flex;
+    p {
+      display: none;
+      font-size: 0.8em;
+      margin-left: 10px;
+    }
   }
 }
 

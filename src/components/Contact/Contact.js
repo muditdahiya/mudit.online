@@ -3,15 +3,43 @@ import insta from "./insta.png";
 import linkedin from "./linkedin.png";
 import youtube from "./youtube.png";
 import twitter from "./twitter.png";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const submitForm = (e) => {
     e.preventDefault();
+    const data = new FormData(e.target);
+
+    const templateObject = {
+      from_name: data.get("from_name"),
+      reply_to: data.get("reply_to"),
+      message: data.get("message"),
+    };
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_KEY,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_KEY,
+        templateObject,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log("Email sent!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
   return (
     <div className="Contact page">
       <h2 className="pageHeading">Contact</h2>
-      <h3>Connect with me on these platforms</h3>
+      <h3>Email me at</h3>
+      <strong>
+        <a href="mailto: contact@muditdahiya.com">contact@muditdahiya.com</a>
+      </strong>
+      <h3>Or connect with me on these platforms</h3>
       <div className="socialMedia">
         <a
           href="https://www.linkedin.com/in/muditdahiya/"
@@ -54,21 +82,38 @@ function Contact() {
         <form onSubmit={submitForm}>
           <div className="cardWrap">
             <div className="cardLeft">
-              <label htmlFor="name">Name:</label>
+              <label htmlFor="name">Name: </label>
               <br />
-              <input type="text" id="name" name="name" />
+              <input
+                type="text"
+                name="from_name"
+                placeholder="What do I call you?"
+                required
+              />
             </div>
             <div className="cardRight">
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email">Email: </label>
               <br />
-              <input type="email" id="email" name="email" />
+              <input
+                type="email"
+                name="reply_to"
+                placeholder="No spam, I promise!"
+              />
             </div>
           </div>
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Message: </label>
           <br />
-          <textarea type="text" id="message" htmlFor="message" />
+          <textarea
+            type="text"
+            name="message"
+            placeholder="What do you want to say?"
+            required
+          />
           <br />
-          <input className="submitButton" type="submit" value="Submit" />
+          <div className="submitWrap">
+            <input className="submitButton" type="submit" value="Submit" />
+            <p>Message</p>
+          </div>
         </form>
       </div>
     </div>

@@ -1,5 +1,5 @@
 {
-  "short_name": "mudit.online",
+  "short_name": "muditdahiya.com",
   "name": "Mudit Dahiya Portfolio",
   "icons": [
     {
@@ -18,8 +18,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
+  "start_url": "http://muditdahiya.com",
+  "display": "browser",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
