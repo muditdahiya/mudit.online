@@ -5,11 +5,15 @@ import youtube from "./youtube.png";
 import twitter from "./twitter.png";
 import emailjs from "@emailjs/browser";
 
+import { useRef } from "react";
+
 function Contact() {
+  const outputMessage = useRef();
+
   const submitForm = (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
-
+    outputMessage.current.style.display = "block";
     const templateObject = {
       from_name: data.get("from_name"),
       reply_to: data.get("reply_to"),
@@ -25,12 +29,19 @@ function Contact() {
       )
       .then(
         (result) => {
-          console.log("Email sent!");
+          outputMessage.current.style.color = "green";
+          outputMessage.current.innerHTML = "Email sent successfully!";
+          e.target.reset();
         },
         (error) => {
-          console.log(error.text);
+          outputMessage.current.style.color = "red";
+          outputMessage.current.innerHTML = "Email could not send!";
         }
       );
+    setTimeout(() => {
+      outputMessage.current.innerHTML = "";
+      outputMessage.current.style.display = "none";
+    }, "5000");
   };
   return (
     <div className="Contact page">
@@ -112,7 +123,7 @@ function Contact() {
           <br />
           <div className="submitWrap">
             <input className="submitButton" type="submit" value="Submit" />
-            <p>Message</p>
+            <p id="outputMessage" ref={outputMessage}></p>
           </div>
         </form>
       </div>

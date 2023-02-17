@@ -333,10 +333,12 @@ body {
 
   .submitWrap {
     display: flex;
+    min-height: 50px;
     p {
       display: none;
       font-size: 0.8em;
       margin-left: 10px;
+      height: 20px;
     }
   }
 }
