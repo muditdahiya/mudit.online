@@ -1,10 +1,11 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import faceAnimation from "./faceAnimation.gif";
 
 function Home() {
   useEffect(() => {
     const texts = [
-      "I am a software developer 💻 ... I love mathematics 🔢 ... I enjoy playing the guitar 🎸 ...",
+      "💻 I am a software developer  ... 🔢 I love mathematics  ... 🎸 I enjoy playing the guitar  ...",
     ];
 
     const timeouts = [];
@@ -77,7 +78,7 @@ function Home() {
       <div className="stage">
         <div className="leftStage">
           <div className="leftContent">
-            <h1 className="pageHeading">Hi, this is Mudit &#128075;</h1>
+            <h1 className="pageHeading">Hi, I am Mudit &#128075;</h1>
             <h2>Welcome to my portfolio!</h2>
             <div id="fixedSpace">
               <h3>
@@ -88,6 +89,10 @@ function Home() {
                 </p>
               </h3>
             </div>
+            <h3>
+              Check out what I've been working on<span> </span>
+              <Link to="/projects">here</Link>
+            </h3>
           </div>
         </div>
         <div className="rightStage">

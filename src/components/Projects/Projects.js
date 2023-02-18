@@ -39,11 +39,11 @@ function Projects() {
             <li>Web app where people can share their blogs</li>
             <li>Made using PERN stack</li>
             <li>Deployed front and back end on GCP Compute Engine</li>
-            <li>Monitor and manage individual posts as Admin of the page</li>
+            <li>Future plans to add comments section</li>
           </ul>
           <strong>
-            Skills: JavaScript, SQL, HTML, CSS, REST API, GCP hosting, Git, Open
-            Graph, Reverse Proxy server, NGINX
+            Skills: JavaScript, SQL, HTML, Sass, REST API, GCP hosting, Git,
+            Open Graph, Nginx
           </strong>
         </div>
         <div className="cardWrap">
@@ -82,8 +82,7 @@ function Projects() {
             <li>Deployed on GCP Compute Engine</li>
           </ul>
           <strong>
-            Skills: JavaScript, React Hooks, HTML, SASS, GCP hosting, Git,
-            Reverse Proxy server, NGINX
+            Skills: JavaScript, React Hooks, HTML, SASS, GCP hosting, Git, Nginx
           </strong>
         </div>
         <div className="cardWrap">
