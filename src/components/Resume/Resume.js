@@ -5,13 +5,13 @@ function Resume() {
       <div className="PDF">
         <object
           className="PDF"
-          data="https://drive.google.com/file/d/16OFTqW7bEU23BFg1aT7H3LRQrbI8JPtj/preview"
+          data="https://drive.google.com/file/d/1mmKu0ik3QeYlCt-fQ5GqoPMcfizF0F1l/preview"
           type="application/pdf"
         >
           <div>
             No online PDF viewer installed.{" "}
             <a
-              href="https://drive.google.com/file/d/16OFTqW7bEU23BFg1aT7H3LRQrbI8JPtj/preview"
+              href="https://drive.google.com/file/d/1mmKu0ik3QeYlCt-fQ5GqoPMcfizF0F1l/preview"
               target="_blank"
               rel="noreferrer"
             >
