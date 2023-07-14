@@ -45,9 +45,9 @@ function Header() {
             <Link className="Link" to={"/"}>
               Home
             </Link>
-            <Link className="Link" to={"/about"}>
+            {/* <Link className="Link" to={"/about"}>
               About
-            </Link>
+            </Link> */}
             <Link className="Link" to={"/projects"}>
               Projects
             </Link>
@@ -67,9 +67,9 @@ function Header() {
             <Link className="Link" to={"/"}>
               Home
             </Link>
-            <Link className="Link" to={"/about"}>
+            {/* <Link className="Link" to={"/about"}>
               About
-            </Link>
+            </Link> */}
             <Link className="Link" to={"/projects"}>
               Projects
             </Link>
