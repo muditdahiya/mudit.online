@@ -6,7 +6,7 @@ function Projects() {
         <div className="cardWrap">
           <div className="card">
             <div className="cardLeft">
-              <h2>ThoughtServe</h2>
+              <h2>ThoughtServe (Web and iOS)</h2>
               <p>
                 <a
                   href="http://muditdahiya.com/thought-serve/"
@@ -14,6 +14,14 @@ function Projects() {
                   rel="noreferrer"
                 >
                   Web Link
+                </a>
+                &emsp;
+                <a
+                  href="https://apps.apple.com/in/app/thoughtserve/id6450876868"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  iOS Link
                 </a>
               </p>
             </div>
@@ -32,18 +40,26 @@ function Projects() {
           </div>
           <strong>
             Blogging app made with React on the front end and Express on the
-            back end. <br /> Uses a Postgres database, Node.js backend and
-            Express framework.
+            back end. iOS app made with SwiftUI. Uses a Postgres database hosted
+            in GCP.
           </strong>
           <ul>
-            <li>Web app where people can share their blogs</li>
-            <li>Made using PERN stack</li>
-            <li>Deployed front and back end on GCP Compute Engine</li>
-            <li>Future plans to add comments section</li>
+            <li>
+              Developed a blog-sharing web application using the PERN stack for
+              web and SwiftUI for iOS
+            </li>
+            <li>
+              Deployed frontend and backend separately on GCP Compute Engine to
+              ensure scalability and maintainability
+            </li>
+            <li>Used same backend API for web and iOS app</li>
+            <li>
+              Future plans include adding a comments section and user management
+            </li>
           </ul>
           <strong>
-            Skills: JavaScript, SQL, HTML, Sass, REST API, GCP hosting, Git,
-            Open Graph, Nginx
+            Skills: JavaScript, SwiftUI, iOS, SQL, HTML, Sass, REST API, GCP,
+            Git, Open Graph, Nginx
           </strong>
         </div>
         <div className="cardWrap">
@@ -75,14 +91,21 @@ function Projects() {
           </div>
           <strong>React web app that uses the sound API.</strong>
           <ul>
-            <li>Web app to demonstrate usage of sound API</li>
-            <li>Made using Node.js and React</li>
-            <li>Used Howler library</li>
-            <li>Use of React Hooks to improve functionality</li>
-            <li>Deployed on GCP Compute Engine</li>
+            <li>
+              Developed a web application showcasing sound API integration using
+              Node.js and React
+            </li>
+            <li>
+              Leveraged the Howler library and employed React Hooks for enhanced
+              functionality
+            </li>
+            <li>
+              Successfully deployed the application on GCP and used Nginx to
+              serve the static webapp
+            </li>
           </ul>
           <strong>
-            Skills: JavaScript, React Hooks, HTML, SASS, GCP hosting, Git, Nginx
+            Skills: JavaScript, React Hooks, HTML, SASS, GCP, Git, Nginx
           </strong>
         </div>
         <div className="cardWrap">
