@@ -1,6 +1,6 @@
 import Home from "../Home/Home";
 
-import About from "../../components/About/About";
+// import About from "../../components/About/About";
 import Projects from "../../components/Projects/Projects";
 import Hobbies from "../../components/Hobbies/Hobbies";
 import Contact from "../../components/Contact/Contact";

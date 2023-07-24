@@ -1,8 +1,30 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import faceAnimation from "./faceAnimation.gif";
+import axios from "axios";
+import Chart from "chart.js/auto";
+import { CategoryScale } from "chart.js";
+import { useState } from "react";
+import { BarChart } from "./BarChart";
+
+Chart.register(CategoryScale);
+// Chart.defaults.scale.grid.display = false;
 
 function Home() {
+  const [countries, setCountries] = useState([]);
+  const [counts, setCounts] = useState([]);
+
+  const [chartData, setChartData] = useState({
+    labels: countries,
+    datasets: [
+      {
+        label: "Visitors",
+        data: counts,
+        borderWidth: 2,
+      },
+    ],
+  });
+
   useEffect(() => {
     const texts = [
       "💻 I am a software developer  ... 🔢 I love mathematics  ... 🎸 I enjoy playing the guitar  ...",
@@ -73,6 +95,50 @@ function Home() {
     };
   });
 
+  //runs once when page reloads
+  //add country to demographic table
+  //get the labels and counts for the graph
+  useEffect(() => {
+    async function updateTable() {
+      //getting ip of the client
+      let res = await axios.get("https://api.ipify.org/?format=json");
+      let ip = res.data.ip;
+
+      //sending ip to backend
+      await axios.post(
+        `${process.env.REACT_APP_API_SERVER_URL}/updateDemographic`,
+        { ip: ip }
+      );
+
+      //getting the country labels
+      const countriesResult = await axios.get(
+        `${process.env.REACT_APP_API_SERVER_URL}/countryCount`
+      );
+      let countriesList = [];
+      let countsList = [];
+      countriesResult.data.forEach((obj) => {
+        countriesList.push(obj.country);
+        countsList.push(obj.count);
+      });
+      setCountries(countriesList);
+      setCounts(countsList);
+    }
+    updateTable();
+  }, []);
+
+  useEffect(() => {
+    setChartData({
+      labels: countries,
+      datasets: [
+        {
+          label: "Visitors",
+          data: counts,
+          borderWidth: 2,
+        },
+      ],
+    });
+  }, [countries, counts]);
+
   return (
     <div className="Home page">
       <div className="stage">
@@ -98,6 +164,13 @@ function Home() {
         <div className="rightStage">
           <img className="gif" src={faceAnimation} alt="Animated gif"></img>
         </div>
+      </div>
+      <div className="demographic">
+        <h2>
+          Here's an interesting graph that shows where my portfolio gets the
+          most visits from
+        </h2>
+        <BarChart chartData={chartData} />
       </div>
     </div>
   );
