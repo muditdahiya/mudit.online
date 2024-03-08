@@ -22,44 +22,33 @@ $computer: 1440px;
     transform: scale(1);
   }
 }
-@keyframes hoverZoomIn {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.05);
-  }
-}
-@keyframes dropmenu {
-  from {
-    top: 6vh;
-  }
-  to {
-    top: 8vh;
-  }
-}
+
 .page {
   animation: ease-out fadein 0.5s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1440px;
+  max-width: 80vw;
 }
 .pageHeading {
   animation: ease-out zoomin 0.3s;
-  font-size: 1.8em;
+  margin-top: 6vh;
 }
-.dropdown {
-  animation: ease-out fadein 0.2s, ease-out dropmenu 0.2s;
+
+//COMPONENTS
+.card {
+  padding: 1em;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  transition: transform 0.2s;
+  box-shadow: 0px 6px 16px 0px #00000014;
+  background-color: white;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
 //GLOBAL
-.Main {
-  //Centers all the pages
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -70,206 +59,57 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #ece9e6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-.Header {
-  height: 8vh;
-  z-index: 10;
-  color: white;
-  background-color: black;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding: 0 4vw;
-  .stage {
-    display: flex;
-    justify-content: space-between;
-  }
-  .right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .Link {
-    text-decoration: none;
-    color: white;
-    margin-left: 1.5vw;
-    padding: 0%;
-  }
-  .Link:hover {
-    text-decoration: underline;
-    transform: scale(1.05);
-  }
-  .logo {
-    height: 7vh;
-    position: relative;
-    top: 100%;
-  }
-  .menu,
-  .cross {
-    height: 4vh;
-    display: none;
-  }
-  .dropdown {
-    display: none;
-    z-index: 4;
-    width: 30vw;
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(0, 0, 0, 0.7);
-    padding: 10px 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-    .Link {
-      margin: 12px 0;
-    }
-  }
+  background-image: linear-gradient(#ffffff 2px, transparent 2px),
+    linear-gradient(to right, #ffffff 2px, transparent 2px);
+  background-size: 46px 46px;
+  background-color: rgba(201, 235, 250, 0.2);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 .Main {
-  padding: 2vh 8vw;
-  min-height: 84vh;
-}
-.Footer {
-  height: 4vh;
-  width: 100%;
-  color: white;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.9em;
-  p {
-    margin: 0;
-  }
-}
-.Home {
-  .stage {
-    display: flex;
-    flex-direction: row;
-    margin: 5vh;
-    width: 100%;
-  }
-  .leftStage {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .rightStage {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .gif {
-      animation: ease-out zoomin 0.3s;
-      width: 100%;
-      max-width: 400px;
-      border-radius: 35%;
-      mask-image: radial-gradient(rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-    }
-  }
-  #fixedSpace {
-    //fixing a space for the text animation
-    line-height: 1.5em;
-    min-height: 7.5em;
-  }
-  .demographic {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .chart-container {
-    width: 100%;
-  }
-}
-.About {
-  max-width: 600px;
-  text-align: left;
-  p {
-    width: 100%;
-  }
-}
-.Resume {
-  .PDF {
-    height: 70vh;
-    width: 80vw;
-    max-width: inherit;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-  }
-}
-.Cards {
-  width: 80vw;
-  max-width: inherit;
+  //Centers all the pages
   display: flex;
   flex-direction: column;
   align-items: center;
-  hr {
-    width: 100%;
-  }
+  min-height: 94vh;
+}
+.Footer {
+  height: 6vh;
+  width: 100vw;
+  color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Home {
+  width: 100%;
+  margin: auto;
   a {
-    color: inherit;
+    text-decoration: none;
+    color: black;
   }
-  ul {
-    padding-left: 20px;
-  }
-  .cardWrap {
-    margin: 20px;
-    width: 100%;
-    max-width: 800px;
-    padding: 40px 60px;
-    // border-radius: 10px;
-    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border: 2px solid black;
-    transition: transform 0.2s;
-
-    background-color: #aeaeae2a;
-  }
-  .cardWrap:hover {
-    transform: scale(1.05);
-  }
-  .cardWrap .card {
+}
+.About {
+  .chart {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 30px 0;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    .cardLeft {
-      width: 80%;
-    }
-    .cardRight {
-      width: 20%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      img {
-        max-height: 200px;
-        height: 4.5em;
-      }
-    }
+    justify-content: center;
+    border-radius: 20px;
   }
+  .description {
+    max-width: 700px;
+    border: 2px solid black;
+    padding: 20px;
+    align-items: center;
+  }
+}
+.Cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 40px 0;
 }
 .Contact {
   width: 100%;
@@ -360,6 +200,46 @@ body {
     }
   }
 }
+.Card {
+  width: 70vw;
+  max-width: 850px;
+  margin: 10px 0;
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  span {
+    background-color: rgba(219, 230, 243, 1);
+    margin: 5px 0.5em 0 0;
+    padding: 0.3em 0.5em;
+    border-radius: 5px;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: rgba(0, 116, 243, 1);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 0 0.5em 0 0;
+      font-size: smaller;
+    }
+    img {
+      padding: 0;
+      margin: 0;
+      height: 1.2em;
+      vertical-align: text-bottom;
+    }
+  }
+}
 
 //LESS THAN PHONE
 @media (max-width: $phone) {
@@ -369,60 +249,242 @@ body {
 }
 
 //PHONE
-@media (max-width: $tablet) {
+@media (min-width: $phone) {
   body {
     font-size: 1em;
   }
-  .Header {
-    .menu {
-      display: block;
-    }
-    .cross,
-    .Links {
-      display: none;
-    }
+  .card {
+    min-height: 120px;
   }
+
   .Home {
-    #animateText {
-      font-size: 0.95em;
-    }
+    // stage settings for phone
     .stage {
+      width: 100%;
       display: flex;
       flex-direction: column;
-      margin: 5vh;
-      width: 100%;
-    }
-    .rightStage {
-      width: 100%;
-    }
-    .leftStage {
-      width: 100%;
-    }
-  }
-  .About {
-    text-align: center;
-  }
-  .Cards {
-    .cardWrap {
-      padding: 20px;
-    }
-  }
-  .Contact {
-    .cardWrap {
-      flex-direction: column;
-      margin: 0;
-      .cardLeft,
-      .cardRight {
+      gap: 1em;
+      padding: 8vw 0;
+      img {
         width: 100%;
       }
+
+      h2,
+      h3 {
+        margin-bottom: 0;
+      }
+      .about {
+        order: -2;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        img {
+          width: 100%;
+          max-width: 240px;
+          // min-width: 150px;
+        }
+        .spacer {
+          display: flex;
+          height: 100%;
+          width: 100%;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+        }
+      }
+      .projects {
+        display: flex;
+        align-items: flex-end;
+        background-image: url("./components/Home/projects.png");
+        background-position: 160% 0%;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        h2 {
+          background-color: white;
+          border-radius: 10px;
+          padding: 0 10px 0 0;
+        }
+      }
+      .resume {
+        display: flex;
+        align-items: flex-end;
+        background-image: url("./components/Home/resume.png");
+        background-position: right;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        h2 {
+          background-color: white;
+          border-radius: 10px;
+          padding: 0 10px 0 0;
+        }
+      }
+      .contact {
+        background-image: url("./components/Home/contact.png");
+        background-repeat: no-repeat;
+        background-position: 200% 20%;
+        background-size: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        .front {
+          position: absolute;
+          z-index: 1;
+          h2 {
+            background-color: white;
+            border-radius: 10px;
+            padding: 0 10px 0 0;
+          }
+        }
+        .back {
+          visibility: hidden;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+          .socialMedia {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            a {
+              width: 15%;
+            }
+            img {
+              margin: 0;
+              padding: 0;
+              transition: transform 0.2s;
+            }
+            img:hover {
+              transform: scale(1.2);
+            }
+          }
+          .email {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50%;
+            a {
+              color: white;
+              background-color: black;
+              padding: 10px;
+              margin: 10px 0;
+              border-radius: 10px;
+              transition: transform 0.2s;
+            }
+            a:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .contact:hover {
+        background-image: none;
+        transform: rotateY(180deg);
+        .front {
+          display: none;
+        }
+        .back {
+          visibility: visible;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transform: rotateY(180deg);
+        }
+      }
+
+      .description {
+        order: -1;
+        padding-bottom: 20px;
+        line-height: 2em;
+        min-height: 9.5em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .Projects {
+    .Card {
+      width: 100%;
+    }
+  }
+
+  .About {
+    .chart {
+      width: 90vw;
+      height: 40vh;
     }
   }
 }
 
 //TABLET
-@media (max-width: $computer) {
+@media (min-width: $tablet) {
   body {
     font-size: 1.1em;
+  }
+  .Home {
+    .stage {
+      img {
+        scale: 1.2;
+        // max-width: none;
+      }
+    }
+    // stage settings for big screens
+    .stage {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+
+      .about {
+        grid-column: 1/2;
+        grid-row: 1/4;
+      }
+      .projects {
+        grid-column: 2/3;
+        grid-row: 1/3;
+        background-position: right;
+        background-size: 90%;
+      }
+      .resume {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        background-position: right bottom;
+        background-size: 80%;
+      }
+      .contact {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        .front {
+          background-position: 0%;
+          background-size: 100%;
+        }
+      }
+      .description {
+        grid-column: 2/4;
+        grid-row: 3/4;
+        min-height: 7.5em;
+        display: block;
+        text-align: left;
+      }
+    }
+  }
+
+  .About {
+    .chart {
+      width: 80vw;
+      height: 60vh;
+    }
   }
 }
 
@@ -430,5 +492,21 @@ body {
 @media (min-width: $computer) {
   body {
     font-size: 1.2em;
+  }
+
+  .Home {
+    .stage {
+      width: 90%;
+      img {
+        scale: 1.15;
+      }
+    }
+  }
+
+  .About {
+    .chart {
+      width: 70vw;
+      height: 70vh;
+    }
   }
 }

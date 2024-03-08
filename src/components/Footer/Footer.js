@@ -1,9 +1,9 @@
-function Footer() {
+const Footer = () => {
   return (
     <div className="Footer">
-      <p>muditdahiya &copy;</p>
+      <div>Developed by Mudit Dahiya</div>
     </div>
   );
-}
+};
 
 export default Footer;
