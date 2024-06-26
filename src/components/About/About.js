@@ -103,7 +103,7 @@ const About = () => {
       <div className="About page">
         <h1 className="pageHeading">About</h1>
 
-        <p className="description">
+        <p className="description card">
           Mudit Dahiya, mechanical engineer by heart, and software engineer by
           mind.
           <br /> <br />
